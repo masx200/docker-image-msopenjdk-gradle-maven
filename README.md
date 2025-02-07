@@ -9,9 +9,10 @@ docker-image-msopenjdk-gradle-maven
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+
+```shell
+docker pull masx200/ubuntu-maven-gradle-msopenjdk
+```
 
 #### 使用说明
 
