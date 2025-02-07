@@ -70,3 +70,5 @@ docker save masx200/ubuntu-maven-gradle-msopenjdk | gzip > ubuntu-maven-gradle-m
 docker save skybro/ubuntu-cn   | gzip > skybro.ubuntu-cn.image.tgz
 
 docker stop ubuntu
+
+ docker rm ubuntu
