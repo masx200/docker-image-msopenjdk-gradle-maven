@@ -11,7 +11,7 @@ ENV PATH=/opt/maven/bin:/usr/lib/jvm/msopenjdk-21-amd64/bin:/opt/gradle/bin:/usr
 COPY install.sh /install.sh
 
 
-RUN sudo apt update && sudo apt install dos2unix -y && apt clean && rm -rf /var/lib/apt/lists/*
+RUN    apt update &&    apt install dos2unix -y && apt clean && rm -rf /var/lib/apt/lists/*
 
 RUN bash -c "find . -maxdepth 1 -type f -name \"*.sh\" -exec dos2unix {} \;"
 # 执行安装脚本
