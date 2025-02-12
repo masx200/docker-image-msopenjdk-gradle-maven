@@ -18,6 +18,8 @@ jobs:
         uses: docker/setup-buildx-action@v2
       - name: Build the Docker image
         run: |
+          apt update 
+          apt install dos2unix -y sudo
           sudo apt update && sudo apt install dos2unix -y && apt clean && rm -rf /var/lib/apt/lists/*
           bash -c "find . -maxdepth 1 -type f -name \"*.sh\" -exec dos2unix {} \;"
           sh build.sh
