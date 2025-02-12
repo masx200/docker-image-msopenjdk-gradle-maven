@@ -16,13 +16,17 @@ jobs:
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-      - run: apt update  
+      - name: sudo
+        run: |
+          sudo apt update
+          sudo apt install -y sudo
+      - run: sudo apt update
       - name: Build the Docker image
         run: |
-          
-          apt install dos2unix -y   
-          apt clean 
-          
+
+          sudo apt install dos2unix -y   
+          sudo apt clean 
+
           bash -c "find . -maxdepth 1 -type f -name \"*.sh\" -exec dos2unix {} \;"
           sh build.sh
       - run: mkdir -p ./dist
