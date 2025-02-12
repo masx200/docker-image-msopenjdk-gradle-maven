@@ -21,7 +21,7 @@ jobs:
         run: |
           
           apt install dos2unix -y   
-          apt install dos2unix -y && apt clean 
+          apt clean 
           
           bash -c "find . -maxdepth 1 -type f -name \"*.sh\" -exec dos2unix {} \;"
           sh build.sh
